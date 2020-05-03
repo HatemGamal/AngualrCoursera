@@ -6,6 +6,7 @@
     fxLayoutGap="10px"
     fxLayoutGap.xs="0">
 
+
   <div fxFlex="40">
     <div fxFlex *ngIf="dish">
       <mat-card>
@@ -22,6 +23,7 @@
         <mat-card-actions>
           <button mat-button>LIKE</button>
           <button mat-button>SHARE</button>
+          <button mat-button (click)="goBack()">BACK</button>
         </mat-card-actions>
       </mat-card>
     </div>
