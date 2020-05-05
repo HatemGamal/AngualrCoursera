@@ -30,8 +30,8 @@
     </div>
   </div>
 
-  <div fxFlex="40" *ngIf="dish">
-    <mat-list  >
+  <div fxFlex="40" *ngIf="dish" >
+    <mat-list  *ngIf="dish.comments" >
       <mat-list-item *ngFor="let comment of dish.comments">
           <p matLine>{{comment.comment}}</p>
           <p matLine>{{comment.rating}} Stars</p>
@@ -40,5 +40,7 @@
     </mat-list>
   </div>
 
-
+  <div [hidden]="dish">
+    <mat-spinner></mat-spinner><h4>Loading . . . Please Wait</h4>
+  </div>
 </div>
