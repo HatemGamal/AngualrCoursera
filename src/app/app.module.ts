@@ -21,8 +21,9 @@ import { FormsModule } from '@angular/forms';
 import {ReactiveFormsModule} from '@angular/forms'
 import 'hammerjs';
 import { DishService } from './services/dish.service';
-import {PromotionService} from './services/promotion.service';
-import { LeaderService } from './services/leader.service'
+import { PromotionService} from './services/promotion.service';
+import { LeaderService } from './services/leader.service';
+import { ProcessHTTPMsgService } from './services/process-httpmsg.service';
 
 import { AppComponent } from './app.component';
 import { MenuComponent } from './menu/menu.component';
@@ -75,7 +76,7 @@ import { baseURL } from './shared/baseurl';
     LoginComponent
 ],
   providers: [DishService,PromotionService,
-              LeaderService, {provide: 'BaseURL', useValue: baseURL}],
+              LeaderService, {provide: 'BaseURL', useValue: baseURL}, ProcessHTTPMsgService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
