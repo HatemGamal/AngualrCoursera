@@ -12,7 +12,7 @@ export function visibility() {
         })),
         transition('* => *', animate('0.5s ease-in-out'))
     ]);
-}
+};
 
 export function flyInOut() {
   return trigger('flyInOut', [
@@ -25,7 +25,7 @@ export function flyInOut() {
           animate('500ms ease-out', style({ transform: 'translateX(100%)', opacity: 0}))
       ])
   ]);
-}
+};
 
 export function expand() {
   return trigger('expand', [
@@ -35,4 +35,4 @@ export function expand() {
           animate('200ms ease-in', style({ opacity: 1, transform: 'translateX(0)' }))
       ])
   ]);
-}
+};
